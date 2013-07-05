@@ -11,5 +11,3 @@ uzawa.o: uzawa.c
 single_phase.o: single_phase.c well.c uzawa.c
 single_phase: single_phase.o well.o uzawa.o
 
-new.o: new.c well.c
-new: new.o well.o

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+#bsub -np 32 "mpirun ./single_phase -mesh_file ref6.mesh -T 720 -step 1 -mumps_fillin 1000"
+bsub -np "$1" "mpirun ./single_phase -pre_refines \"$2\" -T 10"
+#bsub -np "$1" "mpirun ./single_phase -mesh_file 1T.mesh -step 1 -T 5" #-pre_refines \"$2\""

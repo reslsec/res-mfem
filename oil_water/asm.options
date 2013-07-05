@@ -1,0 +1,8 @@
+-solver petsc
+-oem_options "-ksp_type gmres -pc_type asm"
+-oem_options "-pc_asm_overlap 1"
+-oem_options "-sub_ksp_type preonly -sub_pc_type lu"
+-oem_options "-sub_pc_factor_mat_solver_package mumps"
+# MUMPS options
+-oem_options "-mat_mumps_sym 0"        # 0, 1, 2: unsym, spd, sym
+-oem_options "-mat_mumps_icntl_4 0"    # 0, 1, 2, 3, 4: print_level

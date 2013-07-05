@@ -1,0 +1,2 @@
+#! /bin/bash
+bsub -np "$1" "mpirun ./oil_gas -pre_refines "$2" -T 10"

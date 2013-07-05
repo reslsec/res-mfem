@@ -1,0 +1,4 @@
+#! /bin/bash
+
+#bsub -np "$1" "mpirun ./\"$2\" -mesh_file \"$3\" -solver_rtol 0. -solver_maxit 2"
+bsub -np "$1" "mpirun ./IMPES -pre_refines \"$2\" -T 720"
